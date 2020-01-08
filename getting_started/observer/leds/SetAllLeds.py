@@ -12,7 +12,7 @@ class SetAllLeds:
 
     rvr = SpheroRvrObserver()
 
-    def test_leds():
+    def test_leds(self):
         """ This program demonstrates how to set the all the LEDs.
         """
 
