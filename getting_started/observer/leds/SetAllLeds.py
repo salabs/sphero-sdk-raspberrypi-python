@@ -10,36 +10,30 @@ from sphero_sdk import RvrLedGroups
 
 class SetAllLeds:
 
-    rvr = SpheroRvrObserver()
-
     def test_leds(self):
         """ This program demonstrates how to set the all the LEDs.
         """
+        rvr = SpheroRvrObserver()
 
-        try:
-            rvr.wake()
+        rvr.wake()
 
-            # Give RVR time to wake up
-            time.sleep(2)
+        # Give RVR time to wake up
+        time.sleep(2)
 
-            rvr.set_all_leds(
-                led_group=RvrLedGroups.all_lights.value,
-                led_brightness_values=[color for _ in range(10) for color in Colors.off.value]
-            )
+        rvr.set_all_leds(
+            led_group=RvrLedGroups.all_lights.value,
+            led_brightness_values=[color for _ in range(10) for color in Colors.off.value]
+        )
 
-            # Delay to show LEDs change
-            time.sleep(1)
+        # Delay to show LEDs change
+        time.sleep(1)
 
-            rvr.set_all_leds(
-                led_group=RvrLedGroups.all_lights.value,
-                led_brightness_values=[color for _ in range(10) for color in [255, 0, 0]]
-            )
+        rvr.set_all_leds(
+            led_group=RvrLedGroups.all_lights.value,
+            led_brightness_values=[color for _ in range(10) for color in [255, 0, 0]]
+        )
 
-            # Delay to show LEDs change
-            time.sleep(1)
-
-        except KeyboardInterrupt:
-            print('\nProgram terminated with keyboard interrupt.')
-
-        finally:
-            rvr.close()
+        # Delay to show LEDs change
+        time.sleep(1)
+        
+        rvr.close()
