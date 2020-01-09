@@ -38,6 +38,7 @@ class SetAllLeds:
         
         rvr.close()
 
+        ###  RVR basic commands (maybe these to a setup file?)
     def wake_rvr(self):
         """ This program will wake up RVR.
         """
@@ -56,3 +57,20 @@ class SetAllLeds:
         time.sleep(1)
 
         rvr.close()
+
+
+        ### RVR Drive commands
+
+    def drive_forward(self):
+        """ This program will mover RVR forward.
+        """
+        rvr = SpheroRvrObserver()
+
+        rvr.reset_yaw()
+
+        rvr.raw_motors(
+            left_mode=RawMotorModesEnum.forward.value,
+            left_speed=128,  # Valid speed values are 0-255
+            right_mode=RawMotorModesEnum.forward.value,
+            right_speed=128  # Valid speed values are 0-255
+        )
