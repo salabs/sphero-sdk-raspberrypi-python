@@ -47,3 +47,12 @@ class SetAllLeds:
 
         # Give RVR time to wake up
         time.sleep(2)
+
+    def shutdown_rvr(self):
+        """ This program will shut down RVR.
+        """
+        rvr = SpheroRvrObserver()
+
+        time.sleep(1)
+
+        rvr.close()
