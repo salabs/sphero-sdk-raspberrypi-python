@@ -7,8 +7,11 @@ Library             ./set_single_led_robot_mod.py
 #Test Keywords From Library
 #    Test Leds
 
-Test single led
-    Singleled
+#Test single led
+#    Singleled
+
+Wake up RVR
+    Wake Rvr
 
 
 
