@@ -7,6 +7,9 @@ from sphero_sdk import SpheroRvrObserver
 from sphero_sdk import Colors
 from sphero_sdk import RvrLedGroups
 
+### This import for moving RVR tests
+from sphero_sdk import RawMotorModesEnum
+
 
 class SetAllLeds:
 
