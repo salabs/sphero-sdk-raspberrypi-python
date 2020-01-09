@@ -12,14 +12,16 @@ Library             ./set_single_led_robot_mod.py
 
 ## näiden library on toistaiseksi SetAllLeds.py
 
-Wake up RVR
-    Wake Rvr
+#Wake up RVR
+#    Wake Rvr
 
 Move Forward
+    Wake Rvr
     Drive Forward
-
-Shut down RVR
     Shutdown Rvr
+
+#Shut down RVR
+#    Shutdown Rvr
 
 
 
