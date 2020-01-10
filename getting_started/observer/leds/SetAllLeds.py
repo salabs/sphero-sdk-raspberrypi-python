@@ -1,6 +1,8 @@
 import os
 import sys
 import time
+from robot.api import logger
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../')))
 
 from sphero_sdk import SpheroRvrObserver
@@ -13,7 +15,7 @@ from sphero_sdk import RawMotorModesEnum
 
 
 def color_detected_handler(color_detected_data):
-    print('Color detection data response: ', color_detected_data)
+    logger.info('Color detection data response: {}'.format(color_detected_data))
 
 
 class SetAllLeds:
