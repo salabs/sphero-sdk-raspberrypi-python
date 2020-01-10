@@ -106,7 +106,7 @@ class SetAllLeds:
             rvr.sensor_control.start(interval=250)
 
             # Allow this program to run for 10 seconds
-            time.sleep(obs_time)
+            time.sleep(10)
 
         finally:
             rvr.sensor_control.clear()
