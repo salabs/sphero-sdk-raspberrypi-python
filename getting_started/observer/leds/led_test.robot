@@ -26,6 +26,8 @@ Library             ./set_single_led_robot_mod.py
 Detect color
     Wake Rvr
     Detect Color
+    set test variable  ${color}
+    log to console  ${color}
     Shutdown Rvr
 
 
