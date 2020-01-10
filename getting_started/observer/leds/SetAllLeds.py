@@ -79,7 +79,6 @@ class SetAllLeds:
         )
 
     def color_detected_handler(color_detected_data):
-        data = f”Data
-        {color_detected_data}”
+        data = f”Data {color_detected_data}”
         print(data)
         return data
