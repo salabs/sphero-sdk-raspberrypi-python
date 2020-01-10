@@ -78,5 +78,6 @@ class SetAllLeds:
             right_speed=64  # Valid speed values are 0-255
         )
 
-    def color_detected_handler(color_detected_data):
-        print('Color detection data response: ', color_detected_data)
+    def color_detected_handler(color_detected_data, a):
+        a = print('Color detection data response: ', color_detected_data)
+        return a
