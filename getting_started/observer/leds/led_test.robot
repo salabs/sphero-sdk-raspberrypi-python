@@ -1,4 +1,5 @@
-*** Settings *** 
+*** Settings ***
+Library             OperatingSystem
 Library             ./SetAllLeds.py
 Library             ./set_single_led_robot_mod.py
 Variables           ./SetAllLeds.py
