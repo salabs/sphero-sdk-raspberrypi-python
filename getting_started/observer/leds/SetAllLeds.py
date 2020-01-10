@@ -18,7 +18,7 @@ from sphero_sdk import RawMotorModesEnum
 #    logger.info('Color detection data response: {}'.format(color_detected_data))
 
 def color_detected_handler(color_detected_data):
-    with open("/home/pi/sphero-sdk-raspberrypi-python/getting_started/observer/leds/color.txt", 'a+') as fp:
+    with open("color.txt", 'a+') as fp:
         fp.write(color_detected_data)
 
 class SetAllLeds:

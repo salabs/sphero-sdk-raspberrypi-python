@@ -37,6 +37,7 @@ ${color_detected_data}
 Color detection
     Wake Rvr
     Detect Color    ${5}
+    Sleep  7
     ${content}=    Get file    color.txt
     Log    ${content}  console=True
     Shutdown Rvr
