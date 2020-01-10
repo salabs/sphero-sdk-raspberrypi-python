@@ -29,7 +29,7 @@ ${color_detected_data}
 
 Detect color
     Wake Rvr
-    Detect Color
+    Detect Color  ${10}
     #${detect_color}=  color_detected_handler
     #log to console  ${detect_color}
     Shutdown Rvr
