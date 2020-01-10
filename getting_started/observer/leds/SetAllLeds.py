@@ -131,9 +131,9 @@ class SetAllLeds:
 
         rvr.reset_yaw()
 
-        rvr.drive_control.turn_left_degrees(
+        rvr.drive_control.turn_right_degrees(
             heading=0,  # Valid heading values are 0-359
-            amount=-90
+            amount=90
         )
 
     #def detect_color(self, obs_time):
