@@ -3,6 +3,7 @@ Library             ./SetAllLeds.py
 Library             ./set_single_led_robot_mod.py
 Variables           ./SetAllLeds.py
 
+
 *** Variables ***
 ${color_detected_data}
 
@@ -27,12 +28,17 @@ Move Forward
     Drive Forward
     Shutdown Rvr
 
-Detect color
+Turn Left
     Wake Rvr
-    ${log}=  Detect Color  ${10}
-    #${detect_color}=  color_detected_handler
-    log to console  ${log}
+    Left
     Shutdown Rvr
+
+#Detect color
+#    Wake Rvr
+#    ${log}=  Detect Color  ${10}
+#    #${detect_color}=  color_detected_handler
+#    log to console  ${log}
+#    Shutdown Rvr
 
 
 
