@@ -79,9 +79,8 @@ class SetAllLeds:
         )
 
         ###def detect_color(color_detected_data, a):
-    def detect_color(a):
+    def detect_color(a, color_detected_data):
         """ This program detects the color which caught the attention of RVR
         """
-        #a = "Color detection data response: " + color_detected_data
-        a = 'Testing'
+        a = "Color detection data response: " + color_detected_data
         return a
