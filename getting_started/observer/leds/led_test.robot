@@ -37,8 +37,8 @@ ${color_detected_data}
 
 Crawling Route
     Wake Rvr
-#    Lefty
-#   Drive Forward Lightspeed
+    Drive Forward Rally
+    
     Drive Backward
 #    Drive Forward
 #    Lefty
