@@ -78,10 +78,8 @@ class SetAllLeds:
             right_speed=64  # Valid speed values are 0-255
         )
 
-    def detect_color(color_detected_data):
+    def detect_color(color_detected_data, a):
         """ This program detects the color which caught the attention of RVR
         """
-
-        #rvr = SpheroRvrObserver()
-
-        print('Color detection data response: ', color_detected_data)
+        a = print('Color detection data response: ', color_detected_data)
+        return a
