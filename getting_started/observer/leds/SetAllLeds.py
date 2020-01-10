@@ -137,6 +137,7 @@ class SetAllLeds:
     #        rvr.close()
 
     def detect_color(self, obs_time):
+        rvr = SpheroRvrObserver()
         rvr.close()
         rvr.wake()
         # Give RVR time to wake up
