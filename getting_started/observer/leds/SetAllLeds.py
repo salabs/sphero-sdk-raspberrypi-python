@@ -78,7 +78,8 @@ class SetAllLeds:
             right_speed=64  # Valid speed values are 0-255
         )
 
-    def detect_color(color_detected_data, a):
+        ###def detect_color(color_detected_data, a):
+    def detect_color(self, a):
         """ This program detects the color which caught the attention of RVR
         """
         #a = "Color detection data response: " + color_detected_data
