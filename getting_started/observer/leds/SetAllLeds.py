@@ -92,7 +92,7 @@ class SetAllLeds:
 
         rvr.reset_yaw()
 
-        rvr.raw_motors(
+        rvr.run_raw_motors(
             left_mode=RawMotorModesEnum.forward.value,
             left_speed=63,  # Valid speed values are 0-255
             right_mode=RawMotorModesEnum.forward.value,
