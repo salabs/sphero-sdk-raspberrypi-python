@@ -12,4 +12,10 @@
 *.py~
 *.py.un~
 *.DS_Store
+log.html
+report.html
+output.xml
+
+
+
 
