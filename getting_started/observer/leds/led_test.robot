@@ -27,12 +27,12 @@ Move Forward
     Drive Forward
     Shutdown Rvr
 
-#Detect color
-#    Wake Rvr
-#    Detect Color  ${10}
-#    #${detect_color}=  color_detected_handler
-#    #log to console  ${detect_color}
-#    Shutdown Rvr
+Detect color
+    Wake Rvr
+    Detect Color  ${10}
+    #${detect_color}=  color_detected_handler
+    #log to console  ${detect_color}
+    Shutdown Rvr
 
 
 
