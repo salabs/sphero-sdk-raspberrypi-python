@@ -24,15 +24,11 @@ ${color_detected_data}
 #Shut down RVR
 #    Shutdown Rvr
 
-#Move Forward
-#    Wake Rvr
-#    Drive Forward
-#    Shutdown Rvr
+Move Forward
+    Wake Rvr
+    Drive Forward
+    Shutdown Rvr
 
-#Turn Left
-#    Wake Rvr
-#    Left
-#    Shutdown Rvr
 
 Turn Left 2
     Wake Rvr
