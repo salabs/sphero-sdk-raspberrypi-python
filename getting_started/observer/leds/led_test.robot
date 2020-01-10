@@ -24,16 +24,26 @@ ${color_detected_data}
 #Shut down RVR
 #    Shutdown Rvr
 
-Move Forward
-    Wake Rvr
-    Drive Forward
-    Shutdown Rvr
+#Move Forward
+#    Wake Rvr
+#    Drive Forward
+#    Shutdown Rvr
 
 
-Turn Left 2
+#Turn Left 2
+#    Wake Rvr
+#    Lefty
+#    Shutdown rvr
+
+Crawling Route
     Wake Rvr
     Lefty
-    Shutdown rvr
+    Drive Forward
+    Lefty
+    Drive Forward
+    Lefty
+    Shutdown Rvr
+    
 
 #Color detection
 #    Wake Rvr
