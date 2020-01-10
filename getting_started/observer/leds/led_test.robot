@@ -29,10 +29,15 @@ ${color_detected_data}
 #    Drive Forward
 #    Shutdown Rvr
 
-Turn Left
+#Turn Left
+#    Wake Rvr
+#    Left
+#    Shutdown Rvr
+
+Turn Left 2
     Wake Rvr
-    Left
-    Shutdown Rvr
+    Lefty
+    Shutdown rvr
 
 #Color detection
 #    Wake Rvr
