@@ -1,6 +1,10 @@
 *** Settings *** 
 Library             ./SetAllLeds.py
 Library             ./set_single_led_robot_mod.py
+Variables           ./SetAllLeds.py
+
+*** Variables ***
+Detect Color        ${color_detected_data}
 
 *** Test Cases ***
 
