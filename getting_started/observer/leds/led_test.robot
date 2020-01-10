@@ -39,7 +39,7 @@ Crawling Route
     Wake Rvr
 #    Lefty
 #   Drive Forward Lightspeed
-    Righty
+    Drive Backward
 #    Drive Forward
 #    Lefty
     Shutdown Rvr

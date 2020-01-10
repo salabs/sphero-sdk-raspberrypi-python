@@ -115,6 +115,16 @@ class SetAllLeds:
             right_mode=RawMotorModesEnum.forward.value,
             right_speed=255  # Valid speed values are 0-255
         )
+    def drive_backward(self):
+        rvr = SpheroRvrObserver()
+
+        rvr.reset_yaw()
+
+        rvr.drive_control.drive_backward_seconds(
+            speed=16,
+            heading=0,  # Valid heading values are 0-359
+            time_to_drive=1
+        )
 
     def lefty(self):
         rvr = SpheroRvrObserver()
