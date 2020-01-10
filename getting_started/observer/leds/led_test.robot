@@ -37,13 +37,13 @@ ${color_detected_data}
 
 Crawling Route
     Wake Rvr
-    Lefty
-    Drive Forward
-    Lefty
-    Drive Forward
-    Lefty
+#    Lefty
+    Drive Forward Rally
+#    Lefty
+#    Drive Forward
+#    Lefty
     Shutdown Rvr
-    
+
 
 #Color detection
 #    Wake Rvr

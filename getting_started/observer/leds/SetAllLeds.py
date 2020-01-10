@@ -74,7 +74,7 @@ class SetAllLeds:
 
         ### RVR Drive commands
 
-    def drive_forward(self):
+    def drive_forward_crawl(self):
         """ This program will move RVR forward.
         """
         rvr = SpheroRvrObserver()
@@ -88,18 +88,32 @@ class SetAllLeds:
             right_speed=64  # Valid speed values are 0-255
         )
 
-    def left(self):
-        """ This program will turn RVR to left.
+    def drive_forward_rally(self):
+        """ This program will move RVR forward.
         """
         rvr = SpheroRvrObserver()
 
         rvr.reset_yaw()
 
         rvr.raw_motors(
-            left_mode=RawMotorModesEnum.reverse.value,
+            left_mode=RawMotorModesEnum.forward.value,
             left_speed=128,  # Valid speed values are 0-255
             right_mode=RawMotorModesEnum.forward.value,
             right_speed=128  # Valid speed values are 0-255
+        )
+
+    def drive_forward_lightspeed(self):
+        """ This program will move RVR forward.
+        """
+        rvr = SpheroRvrObserver()
+
+        rvr.reset_yaw()
+
+        rvr.raw_motors(
+            left_mode=RawMotorModesEnum.forward.value,
+            left_speed=255,  # Valid speed values are 0-255
+            right_mode=RawMotorModesEnum.forward.value,
+            right_speed=255  # Valid speed values are 0-255
         )
 
     def lefty(self):
