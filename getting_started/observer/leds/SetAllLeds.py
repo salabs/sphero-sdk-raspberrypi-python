@@ -79,6 +79,6 @@ class SetAllLeds:
         )
 
     def color_detected_handler(self, color_detected_data):
-        data = ”{}”.format(color_detected_data)
+        data = "{}".format(color_detected_data)
         print(data)
         return data
