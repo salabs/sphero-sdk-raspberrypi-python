@@ -109,13 +109,12 @@ class SetAllLeds:
             rvr.sensor_control.start(interval=250)
 
             # Allow this program to run for 2 seconds
-            time.sleep(2)
+            time.sleep(0.25)
 
         finally:
-            a =  print('Color detection data response: ', color_detected_data)
             rvr.sensor_control.clear()
 
             # Delay to allow RVR issue command before closing
             time.sleep(.5)
-            return a
+
             rvr.close()
