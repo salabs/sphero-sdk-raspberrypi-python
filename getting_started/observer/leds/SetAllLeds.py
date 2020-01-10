@@ -126,6 +126,16 @@ class SetAllLeds:
             amount=90
         )
 
+    def righty(self):
+        rvr = SpheroRvrObserver()
+
+        rvr.reset_yaw()
+
+        rvr.drive_control.turn_left_degrees(
+            heading=0,  # Valid heading values are 0-359
+            amount=-90
+        )
+
     #def detect_color(self, obs_time):
     #    #data = "{}".format(color_detected_data)
     #    #print(data)
