@@ -81,5 +81,6 @@ class SetAllLeds:
     def detect_color(color_detected_data, a):
         """ This program detects the color which caught the attention of RVR
         """
-        a = print('Color detection data response: ', color_detected_data)
+        a = "Color detection data response: " + color_detected_data
+        print(a)
         return a
