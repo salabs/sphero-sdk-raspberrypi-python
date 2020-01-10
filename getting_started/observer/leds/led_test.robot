@@ -28,9 +28,16 @@ ${color_detected_data}
 #    Drive Forward
 #    Shutdown Rvr
 
-Turn Left
+#Turn Left
+#    Wake Rvr
+#    Left
+#    Shutdown Rvr
+
+Color detection
     Wake Rvr
-    Left
+    Detect Color    5
+    ${content}=    Get file    color.txt
+    Log    ${content}  console=True
     Shutdown Rvr
 
 #Detect color

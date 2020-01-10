@@ -14,9 +14,12 @@ from sphero_sdk import RvrLedGroups
 from sphero_sdk import RawMotorModesEnum
 
 
-def color_detected_handler(color_detected_data):
-    logger.info('Color detection data response: {}'.format(color_detected_data))
+#def color_detected_handler(color_detected_data):
+#    logger.info('Color detection data response: {}'.format(color_detected_data))
 
+def color_detected_handler(color_detected_data):
+    with open("color.txt", 'a+') as fp:
+        fp.write(color_detected_data)
 
 class SetAllLeds:
 
@@ -92,43 +95,63 @@ class SetAllLeds:
 
         rvr.reset_yaw()
 
-        rvr.run_raw_motors(
+        rvr.raw_motors(
             left_mode=RawMotorModesEnum.forward.value,
             left_speed=63,  # Valid speed values are 0-255
             right_mode=RawMotorModesEnum.forward.value,
             right_speed=64  # Valid speed values are 0-255
         )
 
+    #def detect_color(self, obs_time):
+    #    #data = "{}".format(color_detected_data)
+    #    #print(data)
+    #    #return data
+
+    #    """ This method uses the color sensor on RVR (located on the down side of RVR, facing the floor)
+    #        to report colors detected for obs_time seconds.
+    #    """
+    #    rvr = SpheroRvrObserver()
+    #    rvr.close()
+    #    try:
+    #        rvr.wake()
+    #
+    #       # Give RVR time to wake up
+    #       time.sleep(2)
+    #
+    #        rvr.enable_color_detection(is_enabled=True)
+    #        rvr.sensor_control.add_sensor_data_handler(
+    #            service=RvrStreamingServices.color_detection,
+    #            handler=color_detected_handler
+    #        )
+    #        rvr.sensor_control.start(interval=250)
+    #
+    #        # Allow this program to run for 2 seconds
+    #        time.sleep(0.25)
+    #
+    #    finally:
+    #        rvr.sensor_control.clear()
+    #
+    #        # Delay to allow RVR issue command before closing
+    #        time.sleep(.5)
+    #
+    #        rvr.close()
+
     def detect_color(self, obs_time):
-        #data = "{}".format(color_detected_data)
-        #print(data)
-        #return data
-
-        """ This method uses the color sensor on RVR (located on the down side of RVR, facing the floor)
-            to report colors detected for obs_time seconds.
-        """
-        rvr = SpheroRvrObserver()
         rvr.close()
-        try:
-            rvr.wake()
+        rvr.wake()
+        # Give RVR time to wake up
+        time.sleep(2)
+        rvr.enable_color_detection(is_enabled=True)
+        rvr.sensor_control.add_sensor_data_handler(
+            service=RvrStreamingServices.color_detection,
+            handler=color_detected_handler
+        )
+        rvr.sensor_control.start(interval=250)
+        # Allow this program to run for obs_time seconds
+        time.sleep(obs_time)
+        rvr.sensor_control.clear()
+        # Delay to allow RVR issue command before closing
+        time.sleep(.5)
 
-            # Give RVR time to wake up
-            time.sleep(2)
+        rvr.close()
 
-            rvr.enable_color_detection(is_enabled=True)
-            rvr.sensor_control.add_sensor_data_handler(
-                service=RvrStreamingServices.color_detection,
-                handler=color_detected_handler
-            )
-            rvr.sensor_control.start(interval=250)
-
-            # Allow this program to run for 2 seconds
-            time.sleep(0.25)
-
-        finally:
-            rvr.sensor_control.clear()
-
-            # Delay to allow RVR issue command before closing
-            time.sleep(.5)
-
-            rvr.close()
