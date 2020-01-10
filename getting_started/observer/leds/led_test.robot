@@ -35,13 +35,15 @@ ${color_detected_data}
 #    Lefty
 #    Shutdown rvr
 
-Crawling Route
+Crawling Route 1
     Wake Rvr
     Drive Forward Rally
-    
     Drive Backward
-#    Drive Forward
-#    Lefty
+    Righty
+    Drive Forward Crawl
+    Righty
+    Drive Backward
+    Drive Forward Lightspeed
     Shutdown Rvr
 
 
