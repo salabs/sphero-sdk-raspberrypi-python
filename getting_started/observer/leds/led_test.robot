@@ -29,9 +29,9 @@ ${color_detected_data}
 
 Detect color
     Wake Rvr
-    #${detect_color}=  Detect Color
-    set global variable  ${color_detected_data}
-    log to console  '${color_detected_data}'
+    ${detect_color}=  color_detected_handler
+    #set global variable  ${color_detected_data}
+    log to console  '${detect_color}'
     Shutdown Rvr
 
 
