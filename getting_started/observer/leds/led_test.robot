@@ -4,7 +4,7 @@ Library             ./set_single_led_robot_mod.py
 Variables           ./SetAllLeds.py
 
 *** Variables ***
-Detect Color        ${color_detected_data}
+${detect_color}       ${color_detected_data}
 
 *** Test Cases ***
 
@@ -29,7 +29,7 @@ Detect Color        ${color_detected_data}
 
 Detect color
     Wake Rvr
-    ${detect_color}=  Detect Color
+    #${detect_color}=  Detect Color
     set global variable  ${detect_color}
     log to console  ${detect_color}
     Shutdown Rvr
