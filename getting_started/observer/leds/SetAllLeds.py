@@ -92,6 +92,7 @@ class SetAllLeds:
             to report colors detected for obs_time seconds.
         """
         rvr = SpheroRvrObserver()
+        rvr.close()
         try:
             rvr.wake()
 
@@ -105,8 +106,8 @@ class SetAllLeds:
             )
             rvr.sensor_control.start(interval=250)
 
-            # Allow this program to run for 10 seconds
-            time.sleep(10)
+            # Allow this program to run for 2 seconds
+            time.sleep(2)
 
         finally:
             rvr.sensor_control.clear()
