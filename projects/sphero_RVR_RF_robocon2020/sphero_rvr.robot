@@ -1,10 +1,9 @@
 *** Settings ***
 Library             OperatingSystem
 Library             Dialogs
-Library             C:\08_robocon_raspi_RVR\sphero-sdk-raspberrypi-python\projects\sphero_RVR_RF_robocon2020\sphero_rvr.py
+Library             ../sphero_rvr
 #Library             ./set_single_led_robot_mod.py
-Variables           C:\08_robocon_raspi_RVR\sphero-sdk-raspberrypi-python\projects\sphero_RVR_RF_robocon2020\sphero_rvr.py
-
+Variables           ../sphero_rvr
 *** Test Cases ***
 
 Run a query for RVR actions
