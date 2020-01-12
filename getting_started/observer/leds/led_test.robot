@@ -4,7 +4,7 @@ Library             ./SetAllLeds.py
 Library             ./set_single_led_robot_mod.py
 Variables           ./SetAllLeds.py
 
-Suite Setup  Wake up RVR
+Suite Setup  Wake RVR
 Suite Teardown  Shutdown RVR
 
 *** Variables ***
