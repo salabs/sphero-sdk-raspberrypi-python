@@ -1,9 +1,9 @@
 *** Settings ***
 Library             OperatingSystem
 Library             Dialogs
-Library             ../sphero_rvr
+Library             ../sphero_rvr.py
 #Library             ./set_single_led_robot_mod.py
-Variables           ../sphero_rvr
+Variables           ../sphero_rvr.py
 *** Test Cases ***
 
 Run a query for RVR actions
