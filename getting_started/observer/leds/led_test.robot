@@ -9,9 +9,14 @@ Variables           ./SetAllLeds.py
 #Suite Teardown  Shutdown RVR
 
 *** Variables ***
-${color_detected_data}
+#${color_detected_data}
 
 *** Test Cases ***
+#Which drive will be executed?
+#        ask_value
+
+
+
 Run a query for actions
     ${selections}=  Get Selections From User   Select which actions will RVR execute:  Drive Forward Crawling  Drive Forward Rallying  Drive Backwards  Turn Right  Turn Left  Go Lightspeed (WARNING!!! need SPACE!)  Park RVR and Exit
       FOR  ${var}  IN  @{selections}
@@ -23,6 +28,8 @@ Run a query for actions
 	        Run Keyword If 	'${var}' == 'Go Lightspeed (WARNING!!! need SPACE!)' 	log to console  LIGHTSPEED
 	        Run Keyword If 	'${var}' == 'Park RVR and Exit' 	                    log to console  EXIT
 	        END
+
+
 
 #Crawling Route 1
 #    Drive Forward Rally
@@ -49,11 +56,7 @@ Run a query for actions
 #    log to console  ${log}
 #    Shutdown Rvr
 
-
-
-
-
-
-
-
-
+*** Keywords ***
+#Select Drive
+#    [arguments]  ${direction}
+#    Run keyword if  '${direction}' == '${direction}'  log to console  valitsi ajon
