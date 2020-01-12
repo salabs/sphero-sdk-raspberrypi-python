@@ -20,7 +20,7 @@ Variables           ./SetAllLeds.py
 Run a query for actions
     ${selections}=  Get Selections From User   Select which actions will RVR execute:  Drive Forward Crawling  Drive Forward Rallying  Drive Backwards  Turn Right  Turn Left  Go Lightspeed (WARNING!!! need SPACE!)  Park RVR and Exit
       FOR  ${var}  IN  @{selections}
-	        Run Keyword If 	'${var}' == 'Drive Forward Crawling' 	                log to console  CRAWLING
+	        Run Keyword If 	'${var}' == 'Drive Forward Crawling' 	                Run keyword  Crawling
 	        Run Keyword If 	'${var}' == 'Drive Forward Rallying' 	                log to console  RALLY
 	        Run Keyword If 	'${var}' == 'Drive Backwards' 	                        log to console  BACKWARDS
 	        Run Keyword If 	'${var}' == 'Turn Right'               	                log to console  TURN RIGHT
@@ -57,6 +57,7 @@ Run a query for actions
 #    Shutdown Rvr
 
 *** Keywords ***
-#Select Drive
-#    [arguments]  ${direction}
-#    Run keyword if  '${direction}' == '${direction}'  log to console  valitsi ajon
+Crawling
+    Wake Rvr
+    Drive Forward Crawl
+    Shutdown Rvr
