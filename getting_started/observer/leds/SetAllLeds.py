@@ -10,7 +10,7 @@ from sphero_sdk import RvrStreamingServices
 from sphero_sdk import Colors
 from sphero_sdk import RvrLedGroups
 
-### This import for moving RVR tests
+### This import for moving RVR tests with raw motors
 from sphero_sdk import RawMotorModesEnum
 
 
@@ -147,6 +147,10 @@ class SetAllLeds:
             heading=0,  # Valid heading values are 0-359
             amount=90
         )
+    def do_the_dance(self):
+        rvr = SpheroRvrObserver()
+
+        rvr.reset_yaw()
 
 
 

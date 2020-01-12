@@ -1,54 +1,37 @@
 *** Settings ***
 Library             OperatingSystem
+Library             Dialogs
 Library             ./SetAllLeds.py
 Library             ./set_single_led_robot_mod.py
 Variables           ./SetAllLeds.py
 
-Suite Setup  Wake RVR
-Suite Teardown  Shutdown RVR
+#Suite Setup  Wake RVR
+#Suite Teardown  Shutdown RVR
 
 *** Variables ***
 ${color_detected_data}
 
 *** Test Cases ***
+Run a query for actions
+    ${selections}=  Get Selections From User   Select which actions will RVR execute:  Drive Forward Crawling  Drive Forward Rallying  Drive Backwards  Turn Right  Turn Left  Go Lightspeed (WARNING!!! need SPACE!)  Park RVR and Exit
+      FOR  ${var}  IN  @{selections}
+	        Run Keyword If 	'${var}' == 'Drive Forward Crawling' 	                log to console  CRAWLING
+	        Run Keyword If 	'${var}' == 'Drive Forward Rallying' 	                log to console  RALLY
+	        Run Keyword If 	'${var}' == 'Drive Backwards' 	                        log to console  BACKWARDS
+	        Run Keyword If 	'${var}' == 'Turn Right'               	                log to console  TURN RIGHT
+	        Run Keyword If 	'${var}' == 'Turn Left'               	                log to console  TURN LEFT
+	        Run Keyword If 	'${var}' == 'Go Lightspeed (WARNING!!! need SPACE!)' 	log to console  LIGHTSPEED
+	        Run Keyword If 	'${var}' == 'Park RVR and Exit' 	                    log to console  EXIT
+	        END
 
-#Test Keywords From Library
-#    Test Leds
-
-#Test single led
-#    Singleled
-
-## näiden library on toistaiseksi SetAllLeds.py
-
-#Wake up RVR
-#    Wake Rvr
-
-#Shut down RVR
-#    Shutdown Rvr
-
-#Move Forward
-#    Wake Rvr
-#    Drive Forward
-#    Shutdown Rvr
-
-
-#Turn Left 2
-#    Wake Rvr
+#Crawling Route 1
+#    Drive Forward Rally
+#    Drive Forward Crawl
+#    Drive Forward Lightspeed
+#    Drive Backward
+#    Righty
 #    Lefty
-#    Shutdown rvr
 
-Crawling Route 1
-#    Wake Rvr
-    Drive Forward Rally
-    Drive Backward
-    Righty
-    Drive Forward Crawl
-    Righty
-    Drive Backward
-    Drive Forward Lightspeed
-#    Shutdown Rvr
-
-#    Do the dance
 
 
 #Color detection
