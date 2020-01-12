@@ -100,11 +100,16 @@ class SetAllLeds:
 
         rvr.reset_yaw()
 
-        rvr.raw_motors(
-            left_mode=RawMotorModesEnum.forward.value,
-            left_speed=128,  # Valid speed values are 0-255
-            right_mode=RawMotorModesEnum.forward.value,
-            right_speed=128  # Valid speed values are 0-255
+        #rvr.raw_motors(
+        #    left_mode=RawMotorModesEnum.forward.value,
+        #    left_speed=128,  # Valid speed values are 0-255
+        #    right_mode=RawMotorModesEnum.forward.value,
+        #    right_speed=128  # Valid speed values are 0-255
+        #)
+        rvr.drive_control.drive_forward_seconds(
+            speed=128,
+            heading=0,  # Valid heading values are 0-359
+            time_to_drive=1
         )
 
     def drive_forward_lightspeed(self):

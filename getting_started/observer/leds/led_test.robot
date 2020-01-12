@@ -37,7 +37,7 @@ ${color_detected_data}
 
 Crawling Route 1
     Wake Rvr
-#    Drive Forward Rally
+    Drive Forward Rally
 #    Drive Backward
 #    Righty
     Drive Forward Crawl
