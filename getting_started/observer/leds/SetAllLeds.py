@@ -54,6 +54,7 @@ class SetAllLeds:
         rvr.close()
 
         ###  RVR basic commands (maybe these to a setup file?)
+
     def wake_rvr(self):
         """ This program will wake up RVR.
         """
@@ -149,10 +150,11 @@ class SetAllLeds:
             heading=0,  # Valid heading values are 0-359
             amount=90
         )
-    def do_the_dance(self):
-        rvr = SpheroRvrObserver()
 
-        rvr.reset_yaw()
+    #def do_the_dance(self):
+    #    rvr = SpheroRvrObserver()
+
+    #    rvr.reset_yaw()
 
 
 
@@ -190,22 +192,22 @@ class SetAllLeds:
     #
     #        rvr.close()
 
-    def detect_color(self, obs_time):
-        rvr = SpheroRvrObserver()
-        rvr.close()
-        rvr.wake()
-        # Give RVR time to wake up
-        time.sleep(2)
-        rvr.enable_color_detection(is_enabled=True)
-        rvr.sensor_control.add_sensor_data_handler(
-            service=RvrStreamingServices.color_detection,
-            handler=color_detected_handler
-        )
-        rvr.sensor_control.start(interval=250)
-        # Allow this program to run for obs_time seconds
-        time.sleep(obs_time)
-        rvr.sensor_control.clear()
-        # Delay to allow RVR issue command before closing
-        time.sleep(.5)
+    #def detect_color(self, obs_time):
+    #    rvr = SpheroRvrObserver()
+    #    rvr.close()
+    #    rvr.wake()
+    #    # Give RVR time to wake up
+    #    time.sleep(2)
+    #    rvr.enable_color_detection(is_enabled=True)
+    #    rvr.sensor_control.add_sensor_data_handler(
+    #        service=RvrStreamingServices.color_detection,
+    #        handler=color_detected_handler
+    #    )
+    #    rvr.sensor_control.start(interval=250)
+    #    # Allow this program to run for obs_time seconds
+    #    time.sleep(obs_time)
+    #    rvr.sensor_control.clear()
+    #    # Delay to allow RVR issue command before closing
+    #    time.sleep(.5)
 
-        rvr.close()
+    #    rvr.close()
