@@ -7,7 +7,7 @@ Variables           ./SetAllLeds.py
 
 *** Test Cases ***
 
-Run a query for actions
+Run a query for RVR actions
     Ask Driver for directions
 
 *** Keywords ***
