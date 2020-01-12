@@ -124,8 +124,9 @@ class SetAllLeds:
         rvr.drive_control.drive_backward_seconds(
             speed=16,
             heading=0,  # Valid heading values are 0-359
-            time_to_drive=1
+            time_to_drive=.5
         )
+        rvr.close()
 
     def lefty(self):
         rvr = SpheroRvrObserver()
@@ -146,6 +147,8 @@ class SetAllLeds:
             heading=0,  # Valid heading values are 0-359
             amount=90
         )
+
+
 
     #def detect_color(self, obs_time):
     #    #data = "{}".format(color_detected_data)

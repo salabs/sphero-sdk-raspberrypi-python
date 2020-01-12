@@ -4,6 +4,8 @@ Library             ./SetAllLeds.py
 Library             ./set_single_led_robot_mod.py
 Variables           ./SetAllLeds.py
 
+Suite Setup  Wake up RVR
+Suite Teardown  Shutdown RVR
 
 *** Variables ***
 ${color_detected_data}
@@ -36,15 +38,15 @@ ${color_detected_data}
 #    Shutdown rvr
 
 Crawling Route 1
-    Wake Rvr
+#    Wake Rvr
     Drive Forward Rally
-#    Drive Backward
-#    Righty
+    Drive Backward
+    Righty
     Drive Forward Crawl
-#    Righty
-#    Drive Backward
+    Righty
+    Drive Backward
     Drive Forward Lightspeed
-    Shutdown Rvr
+#    Shutdown Rvr
 
 #    Do the dance
 
