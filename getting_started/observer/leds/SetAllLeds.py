@@ -84,7 +84,7 @@ class SetAllLeds:
         rvr.drive_control.drive_forward_seconds(
             speed=64,
             heading=0,  # Valid heading values are 0-359
-            time_to_drive=0.5
+            time_to_drive=.5
         )
         rvr.close()
 
@@ -98,7 +98,7 @@ class SetAllLeds:
         rvr.drive_control.drive_forward_seconds(
             speed=128,
             heading=0,  # Valid heading values are 0-359
-            time_to_drive=0.5
+            time_to_drive=.5
         )
         rvr.close()
 
@@ -112,7 +112,7 @@ class SetAllLeds:
         rvr.drive_control.drive_forward_seconds(
             speed=255,
             heading=0,  # Valid heading values are 0-359
-            time_to_drive=0.2
+            time_to_drive=.2
         )
         rvr.close()
 
