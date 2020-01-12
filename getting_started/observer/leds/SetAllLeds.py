@@ -91,8 +91,8 @@ class SetAllLeds:
             speed=64,
             heading=0,  # Valid heading values are 0-359
             time_to_drive=1
-        rvr.close()
         )
+        rvr.close()
 
     def drive_forward_rally(self):
         """ This program will move RVR forward.
@@ -111,8 +111,8 @@ class SetAllLeds:
             speed=128,
             heading=0,  # Valid heading values are 0-359
             time_to_drive=1
-        rvr.close()
         )
+        rvr.close()
 
     def drive_forward_lightspeed(self):
         """ This program will move RVR forward.
