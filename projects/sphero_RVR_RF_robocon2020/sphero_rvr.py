@@ -21,7 +21,7 @@ def color_detected_handler(color_detected_data):
     with open("color.txt", 'a+') as fp:
         fp.write(color_detected_data)
 
-class SetAllLeds:
+class sphero_rvr:
 
     def test_leds(self):
         """ This program demonstrates how to set the all the LEDs.
