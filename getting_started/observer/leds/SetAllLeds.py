@@ -75,18 +75,12 @@ class SetAllLeds:
         ### RVR Drive commands
 
     def drive_forward_crawl(self):
-        """ This program will move RVR forward.
+        """ This program will move RVR forwards slow.
         """
         rvr = SpheroRvrObserver()
 
         rvr.reset_yaw()
 
-        #rvr.raw_motors(
-        #    left_mode=RawMotorModesEnum.forward.value,
-        #    left_speed=64,  # Valid speed values are 0-255
-        #    right_mode=RawMotorModesEnum.forward.value,
-        #    right_speed=64  # Valid speed values are 0-255
-        # )
         rvr.drive_control.drive_forward_seconds(
             speed=64,
             heading=0,  # Valid heading values are 0-359
@@ -95,18 +89,12 @@ class SetAllLeds:
         rvr.close()
 
     def drive_forward_rally(self):
-        """ This program will move RVR forward.
+        """ This program will move RVR forward fast.
         """
         rvr = SpheroRvrObserver()
 
         rvr.reset_yaw()
 
-        #rvr.raw_motors(
-        #    left_mode=RawMotorModesEnum.forward.value,
-        #    left_speed=128,  # Valid speed values are 0-255
-        #    right_mode=RawMotorModesEnum.forward.value,
-        #    right_speed=128  # Valid speed values are 0-255
-        #)
         rvr.drive_control.drive_forward_seconds(
             speed=128,
             heading=0,  # Valid heading values are 0-359
@@ -115,18 +103,19 @@ class SetAllLeds:
         rvr.close()
 
     def drive_forward_lightspeed(self):
-        """ This program will move RVR forward.
+        """ This program will move RVR forward at lightspeed.
         """
         rvr = SpheroRvrObserver()
 
         rvr.reset_yaw()
 
-        rvr.raw_motors(
-            left_mode=RawMotorModesEnum.forward.value,
-            left_speed=255,  # Valid speed values are 0-255
-            right_mode=RawMotorModesEnum.forward.value,
-            right_speed=255  # Valid speed values are 0-255
+        rvr.drive_control.drive_forward_seconds(
+            speed=255,
+            heading=0,  # Valid heading values are 0-359
+            time_to_drive=1
         )
+        rvr.close()
+
     def drive_backward(self):
         rvr = SpheroRvrObserver()
 

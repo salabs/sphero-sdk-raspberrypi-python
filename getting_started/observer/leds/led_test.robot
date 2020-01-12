@@ -43,7 +43,7 @@ Crawling Route 1
     Drive Forward Crawl
 #    Righty
 #    Drive Backward
-#    Drive Forward Lightspeed
+    Drive Forward Lightspeed
     Shutdown Rvr
 
 #    Do the dance
