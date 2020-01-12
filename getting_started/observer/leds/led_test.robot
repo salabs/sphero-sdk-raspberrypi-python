@@ -37,14 +37,16 @@ ${color_detected_data}
 
 Crawling Route 1
     Wake Rvr
-    Drive Forward Rally
-    Drive Backward
-    Righty
+#    Drive Forward Rally
+#    Drive Backward
+#    Righty
     Drive Forward Crawl
-    Righty
-    Drive Backward
-    Drive Forward Lightspeed
+#    Righty
+#    Drive Backward
+#    Drive Forward Lightspeed
     Shutdown Rvr
+
+#    Do the dance
 
 
 #Color detection
