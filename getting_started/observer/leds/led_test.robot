@@ -16,7 +16,7 @@ Run a query for RVR actions
 *** Keywords ***
 
 Ask Driver for directions
-    ${selections}=  Get Selections From User   Select which actions RVR will execute:  Drive Forward Crawling  Drive Forward Rallying  Drive Backwards  Turn Right  Turn Left  Led Show
+    ${selections}=  Get Selections From User   Select which actions RVR will execute:  Drive Forward Crawling  Drive Forward Rallying  Drive Backwards  Turn Right  Turn Left  Led Show  Led Show 2
       FOR  ${option}  IN  @{selections}
 	        Run Keyword If 	'${option}' == 'Drive Forward Crawling' 	                Run keyword  Crawling
 	        Run Keyword If 	'${option}' == 'Drive Forward Rallying' 	                Run keyword  Rallying
@@ -24,6 +24,7 @@ Ask Driver for directions
 	        Run Keyword If 	'${option}' == 'Turn Right'               	                Run keyword  Turn Right
 	        Run Keyword If 	'${option}' == 'Turn Left'               	                Run keyword  Turn Left
 	        Run Keyword If 	'${option}' == 'Led Show' 	                                Run keyword  Led Show
+	        Run Keyword If 	'${option}' == 'Led Show 2' 	                            Run keyword  Led Show 2
 	        END
             Continue or quit
 
@@ -67,6 +68,9 @@ Lightspeed
 
 Led Show
     Test Leds
+
+Led Show 2
+    Led Show B
 
 #Color detection
 #    Wake Rvr
