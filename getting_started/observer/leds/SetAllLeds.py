@@ -150,6 +150,9 @@ class SetAllLeds:
     def led_show_b(self):
         """ This program demonstrates how to set multiple LEDs on RVR using the LED control helper.
         """
+        rvr = SpheroRvrObserver()
+
+        rvr.reset_yaw()
 
         try:
             rvr.wake()
