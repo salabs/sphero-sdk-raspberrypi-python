@@ -111,7 +111,7 @@ class SetAllLeds:
         rvr.reset_yaw()
 
         rvr.drive_control.drive_forward_seconds(
-            speed=255,
+            speed=200,
             heading=0,  # Valid heading values are 0-359
             time_to_drive=1
         )
