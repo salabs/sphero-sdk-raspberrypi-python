@@ -5,6 +5,9 @@ Library             ./SetAllLeds.py
 Library             ./set_single_led_robot_mod.py
 Variables           ./SetAllLeds.py
 
+Suite Setup  Wake Rvr
+Suite Teardown  Shutdown Rvr
+
 *** Test Cases ***
 
 Run a query for RVR actions
@@ -33,34 +36,34 @@ Redrive
     Ask Driver for directions
 
 Crawling
-    Wake Rvr
+#    Wake Rvr
     Drive Forward Crawl
-    Shutdown Rvr
+#    Shutdown Rvr
 
 Rallying
-    Wake Rvr
+#    Wake Rvr
     Drive Forward Rally
-    Shutdown Rvr
+#    Shutdown Rvr
 
 Backwards
-    Wake Rvr
+#    Wake Rvr
     Drive Backward
-    Shutdown Rvr
+#    Shutdown Rvr
 
 Turn Right
-    Wake Rvr
+#    Wake Rvr
     Righty
-    Shutdown Rvr
+#    Shutdown Rvr
 
 Turn Left
-    Wake Rvr
+#    Wake Rvr
     Lefty
-    Shutdown Rvr
+#    Shutdown Rvr
 
 Lightspeed
-    Wake Rvr
+#    Wake Rvr
     Drive Forward Lightspeed
-    Shutdown Rvr
+#    Shutdown Rvr
 
 
 #Color detection

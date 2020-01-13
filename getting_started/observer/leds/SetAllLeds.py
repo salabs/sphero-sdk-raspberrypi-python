@@ -104,14 +104,12 @@ class SetAllLeds:
         rvr.close()
 
     def drive_forward_lightspeed(self):
-        """ This program will move RVR forward at lightspeed.
-        """
         rvr = SpheroRvrObserver()
 
         rvr.reset_yaw()
 
         rvr.drive_control.drive_forward_seconds(
-            speed=200,
+            speed=192,
             heading=0,  # Valid heading values are 0-359
             time_to_drive=1
         )
