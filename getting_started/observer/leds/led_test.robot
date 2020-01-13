@@ -16,14 +16,14 @@ Run a query for RVR actions
 *** Keywords ***
 
 Ask Driver for directions
-    ${selections}=  Get Selections From User   Select which actions RVR will execute:  Drive Forward Crawling  Drive Forward Rallying  Drive Backwards  Turn Right  Turn Left
+    ${selections}=  Get Selections From User   Select which actions RVR will execute:  Drive Forward Crawling  Drive Forward Rallying  Drive Backwards  Turn Right  Turn Left  Led Show
       FOR  ${option}  IN  @{selections}
 	        Run Keyword If 	'${option}' == 'Drive Forward Crawling' 	                Run keyword  Crawling
 	        Run Keyword If 	'${option}' == 'Drive Forward Rallying' 	                Run keyword  Rallying
 	        Run Keyword If 	'${option}' == 'Drive Backwards' 	                        Run keyword  Backwards
 	        Run Keyword If 	'${option}' == 'Turn Right'               	                Run keyword  Turn Right
 	        Run Keyword If 	'${option}' == 'Turn Left'               	                Run keyword  Turn Left
-	        #Run Keyword If 	'${option}' == 'Go Lightspeed (WARNING!!! needs SPACE!)' 	Run keyword  Lightspeed
+	        Run Keyword If 	'${option}' == 'Led Show' 	                                Run keyword  Led Show
 	        END
             Continue or quit
 
@@ -65,6 +65,8 @@ Lightspeed
     Drive Forward Lightspeed
 #    Shutdown Rvr
 
+Led Show
+    Test Leds
 
 #Color detection
 #    Wake Rvr
